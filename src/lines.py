@@ -6,6 +6,9 @@ plt.interactive(False)
 
 
 def lines(image, n_windows=10):
+    """
+    Calculates polynomails that describe the lanes lines in a birdseye view image
+    """
     # Create a histogram of the bottom of the image
     histogram = np.sum(image[image.shape[0] // 2:, :], axis=0)
 

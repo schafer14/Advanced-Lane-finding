@@ -10,6 +10,11 @@ ny = 6
 
 class Calibrator:
     def __init__(self, image_path, nx=nx, ny=ny):
+        """
+        Calculates the camera matrix that can be used to distort and undistort images
+
+        This is done on init time so runtime can be a little faster.
+        """
         try:
             self.dist = np.load("../camera_cal/dist.npy")
             self.mtx = np.load("../camera_cal/mtx.npy")
@@ -38,7 +43,6 @@ class Calibrator:
             self.mtx = mtx
             np.save("../camera_cal/dist.npy", self.dist)
             np.save("../camera_cal/mtx.npy", self.mtx)
-
 
     def undistort(self, img):
         return cv2.undistort(img, self.mtx, self.dist, None, self.mtx)

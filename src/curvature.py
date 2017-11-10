@@ -2,6 +2,9 @@ import numpy as np
 
 
 def curvature(left_fit, right_fit):
+    """
+    Calculates the curvature of the lane given two 2nd degree polynomials for each lane
+    """
     ploty = np.linspace(0, 719, num=720)  # to cover same y-range as image
 
     # For each y position generate random x position within +/-50 pix
