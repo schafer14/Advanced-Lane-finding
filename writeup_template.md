@@ -92,6 +92,9 @@ Here's a [link to my video result](https://youtu.be/JOPVBjE40CU)
 
 ### Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### 1. Notes and discussion.
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The there are three main issues that will instantly wreck the accuracy of this project. 
+- Hills: driving on a non flat road will mean the warping to a birds eye view will not maintain the correct curvature of the road. 
+- Lighting conditions: under difficult lighting or bad weather conditions the lines may be harder to extract. If a big enough portion of the lane is not accurately recorded the numeric results will not be accurate. 
+- Camera position: The assumption that the camera is in the middle of the car and the cannot be violated or the position details will not be accurate. 
