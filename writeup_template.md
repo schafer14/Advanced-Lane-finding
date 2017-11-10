@@ -67,6 +67,16 @@ This new image was then warped back into the same coordinate system as the undis
 
 ![alt text][image7]
 
+### 5. Calculations
+
+The curvature and position of the car were then calculated and added to the image
+- curvature was calculated based on the polynomial of each lane line and then the two curvaturs were averaged. 
+- position was calculated based on the diffence between the lane center and the image center and then converted to world space.
+
+![Position][./output_images/Image0_position.jpg]
+
+![Position][./output_images/Image0_text.jpg]
+
 ---
 
 ### Pipeline (video)
