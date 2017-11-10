@@ -26,6 +26,7 @@ The goals / steps of this project are the following:
 [image5]: ./output_images/Image0_colored.jpg "Colored"
 [image6]: ./output_images/Image0_transformed.jpg "Lane in Birdseye"
 [image7]: ./output_images/Image0_result.jpg "Lane in Birdseye"
+[image7]: ./output_images/Image0_position.jpg "Lane in Birdseye"
 
 ## Example resulting image
 ![alt text][image1]
@@ -73,9 +74,9 @@ The curvature and position of the car were then calculated and added to the imag
 - curvature was calculated based on the polynomial of each lane line and then the two curvaturs were averaged. 
 - position was calculated based on the diffence between the lane center and the image center and then converted to world space.
 
-![Position][./output_images/Image0_position.jpg]
+![alt text][image8]
 
-![Position][./output_images/Image0_text.jpg]
+![alt text][image1]
 
 ---
 
