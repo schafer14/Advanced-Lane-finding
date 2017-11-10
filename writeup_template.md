@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 [image5]: ./output_images/Image0_colored.jpg "Colored"
 [image6]: ./output_images/Image0_transformed.jpg "Lane in Birdseye"
 [image7]: ./output_images/Image0_result.jpg "Lane in Birdseye"
-[image7]: ./output_images/Image0_position.jpg "Lane in Birdseye"
+[image8]: ./output_images/Image0_position.jpg "Lane in Birdseye"
 
 ## Example resulting image
 ![alt text][image1]
