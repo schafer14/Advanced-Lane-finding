@@ -22,8 +22,10 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/Image0_text.jpg "Result"
 [image2]: ./output_images/Image0_undistorted.jpg "Undistorted"
 [image3]: ./output_images/Image0_original.jpg "Original"
-[image4]: ./output_images/Image0_transformed.jpg "Transformed"
+[image4]: ./output_images/Image0_warped.jpg "Transformed"
 [image5]: ./output_images/Image0_colored.jpg "Colored"
+[image6]: ./output_images/Image0_transformed.jpg "Lane in Birdseye"
+[image7]: ./output_images/Image0_result.jpg "Lane in Birdseye"
 
 ## Example resulting image
 ![alt text][image1]
@@ -55,15 +57,23 @@ To extract the lane lines the birds eye view was transformed into a binary image
 
 #### 3. Lane information extraction
 
-A polynomal function was then fit on the coordinates of the 'on' pixels in the image. This was done by collecting  
+A polynomal function was then fit on the coordinates of the 'on' pixels in the image. This was done by collecting pixels that were in the correct spot. To do this we defined a rectangular box for each of lane in ten spots in the birds eye views vertical direction. pixels not in the boxes were discarded and a polynomial for each line was fit to remaining points. This functions were used to determine the lane, and later on the curvature and position of the car
 
-![alt text][image4]
+![alt text][image6]
+
+### 4. Unwarping
+
+This new image was then warped back into the same coordinate system as the undistorted image and the two images were merged together. 
+
+![alt text][image7]
 
 ---
 
 ### Pipeline (video)
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+A video was created by running each frame from a video through the pipeline. 
+
+#### 1.Result as a video
 
 Here's a [link to my video result](https://youtu.be/JOPVBjE40CU)
 
